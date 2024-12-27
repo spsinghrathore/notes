@@ -113,6 +113,13 @@ function addCategory() {
 
     categoriesContainer.appendChild(newCategoryCard); // Append the new category card to the categories container
 
+    // Add the new category to the select dropdown
+    const categorySelect = document.getElementById('categorySelect');
+    const newOption = document.createElement('option');
+    newOption.value = categoryName.toLowerCase();
+    newOption.text = `${categoryEmoji} ${categoryName}`;
+    categorySelect.appendChild(newOption);
+
     // Create an empty array for the new category in localStorage
     localStorage.setItem(categoryName.toLowerCase(), JSON.stringify([]));
 
