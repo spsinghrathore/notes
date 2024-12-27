@@ -1,0 +1,178 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Header */
+#header {
+  background: #1c1c1c;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+#header h1 {
+  color: #00bcd4;
+  font-size: 2rem;
+}
+
+#header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+#header nav ul li {
+  margin: 0 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00bcd4;
+}
+
+/* Resources Section */
+#resources {
+  margin-top: 60px; /* Adjust for fixed header */
+}
+
+#resources h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.category {
+  background: #222;
+  padding: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  width: 25%;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.category:hover {
+  transform: scale(1.1);
+  background: #444;
+}
+
+.category .emoji {
+  font-size: 3rem;
+}
+
+.category h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+#addCategory {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#addCategory input {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #00a6b5;
+}
+
+/* Notes Container */
+.notes-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.note {
+  background: #333;
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note .timestamp {
+  font-size: 0.8rem;
+  color: #bbb;
+  margin-left: 1rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+footer {
+  background: #1c1c1c;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Add this to the existing CSS */
+.selected {
+  background: #444;
+  font-weight: bold;
+}

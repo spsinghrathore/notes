@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes App</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header id="header">
+    <div class="container">
+      <h1>My Notes App</h1>
+      <nav>
+        <ul id="categoryNav">
+          <li><a href="javascript:void(0)" class="nav-link" id="techLink" onclick="openCategory('tech')">💻 Tech</a></li>
+          <li><a href="javascript:void(0)" class="nav-link" id="jsLink" onclick="openCategory('javascript')">🖥️ JavaScript</a></li>
+          <li><a href="javascript:void(0)" class="nav-link" id="cssLink" onclick="openCategory('css')">🎨 CSS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Resources Section -->
+  <section id="resources">
+    <div class="container">
+      <h2>Categories</h2>
+      <div class="categories">
+        <div class="category" id="tech" onclick="openCategory('tech')">
+          <span class="emoji">💻</span>
+          <h3>Tech</h3>
+        </div>
+        <div class="category" id="javascript" onclick="openCategory('javascript')">
+          <span class="emoji">🖥️</span>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="category" id="css" onclick="openCategory('css')">
+          <span class="emoji">🎨</span>
+          <h3>CSS</h3>
+        </div>
+      </div>
+
+      <div id="addCategory">
+        <input type="text" id="newCategoryName" placeholder="Category Name">
+        <input type="text" id="newCategoryEmoji" placeholder="Emoji (e.g., 📝)">
+        <button onclick="addCategory()">Add Category</button>
+      </div>
+
+      <!-- Notes Container -->
+      <div class="notes-container" id="notesContainer"></div>
+
+      <!-- Note input and Save buttons -->
+      <div class="note-input">
+        <textarea id="noteInput" placeholder="Write your note here..." rows="5"></textarea>
+        <button onclick="saveNote()">Save Note</button>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Notes App</p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
